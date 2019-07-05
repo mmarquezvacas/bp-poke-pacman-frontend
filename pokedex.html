@@ -73,36 +73,11 @@
                             <tr>
                               <th>Foto</th>
                               <th>Nombre</th>
-                              <th>Tipo</th>
                               <th>Habilidades</th>
                               <th>Evoluciones</th>
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td>
-                                <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="">
-                              </td>
-                              <td>Pikachu</td>
-                              <td>Eléctrico</td>
-                              <td>Rayo, Trueno</td>
-                              <td>Raychu</td>
-                            </tr>
-                            <tr>
-                              <td>Garrett Winters</td>
-                              <td>Accountant</td>
-                              <td>Tokyo</td>
-                              <td>63</td>
-                              <td>2011/07/25</td>
-                            </tr>
-                            <tr>
-                              <td>Ashton Cox</td>
-                              <td>Junior Technical Author</td>
-                              <td>San Francisco</td>
-                              <td>66</td>
-                              <td>2009/01/12</td>
-                            </tr>
-
                           </tbody>
                         </table>
                       </div>
@@ -239,9 +214,25 @@
         const tbody = document.getElementById("dataTableExistentes");
         pokemons.map(pokemon => {
           const tr = document.createElement('tr');
-          const td = document.createElement('td');
-          td.innerHTML = pokemon.name;
+
+          const img = document.createElement('img');
+          img.src = pokemon.imageurl;
+          tr.appendChild(img);
+
+          const td2 = document.createElement('td');
+          td2.innerHTML = pokemon.name;
+          tr.appendChild(td2);
+
+          const td3 = document.createElement('td');
+          td3.innerHTML = pokemon.description;
+          tr.appendChild(td3);
+
+          const td4 = document.createElement('td');
+          td4.innerHTML = pokemon.level;
+          tr.appendChild(td4);
+
           tbody.appendChild(tr);
+
         })
 
       });
