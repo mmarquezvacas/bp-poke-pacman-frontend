@@ -10,7 +10,9 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
- :root {
+ @import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
+
+:root {
   --blue: #4e73df;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -61,13 +63,12 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Exo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #858796;
   text-align: left;
-  background-color: #DC143C;
 }
 
 [tabindex="-1"]:focus {
@@ -1676,16 +1677,16 @@ pre code {
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #e3e6f0;
+  border-top: none;
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #e3e6f0;
+  border-bottom: none;
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #e3e6f0;
+  border-top: none;
 }
 
 .table-sm th,
@@ -1694,12 +1695,12 @@ pre code {
 }
 
 .table-bordered {
-  border: 1px solid #e3e6f0;
+  border: none;
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #e3e6f0;
+  border: none;
 }
 
 .table-bordered thead th,
@@ -2614,14 +2615,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #FFD700;
-  border-color: #FFD700;
+  background-color: #1E90FF;
+  border-color: #1E90FF;
 }
 
 .btn-primary:hover {
   color: #fff;
   background-color: #2e59d9;
-  border-color: #2653d4;
+  border-color: #2e59d9;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -4332,7 +4333,7 @@ input[type="button"].btn-block {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 1rem;
 }
 
 .nav-link:hover, .nav-link:focus {
@@ -4351,6 +4352,7 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-item {
   margin-bottom: -1px;
+  width: 50%;
 }
 
 .nav-tabs .nav-link {
@@ -4898,7 +4900,11 @@ input[type="button"].btn-block {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1.25rem;
+  padding: 2.25rem 2.25rem;
+}
+
+.card-body.caracteristicas{
+  padding: .5rem 1.25rem;
 }
 
 .card-title {
@@ -4926,7 +4932,6 @@ input[type="button"].btn-block {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: #f8f9fc;
-  border-bottom: 1px solid #e3e6f0;
 }
 
 .card-header:first-child {
@@ -10372,7 +10377,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #4e73df !important;
+  color: #000 !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -12058,4 +12063,20 @@ footer.sticky-footer .copyright {
 
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
+}
+
+#existentes td img, #atrapados td img{
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+}
+
+#existentes td, #atrapados td{
+  vertical-align: middle;
+  box-shadow: 0 -1px 0 #eee;
+  padding: 24px 12px;
+}
+
+.modal img{
+  max-width: 100%;
 }
