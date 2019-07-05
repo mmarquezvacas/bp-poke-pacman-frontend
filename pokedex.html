@@ -223,10 +223,12 @@
   </div>
 
   <script>
-    fetch('https://q78z5yidec.execute-api.us-east-1.amazonaws.com/dev/pokemons', {
+    fetch('https://q78z5yidec.execute-api.us-east-1.amazonaws.com/dev/pokemons/list', {
       mode: 'cors',
+      method: 'GET',
       headers: {
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, HEAD, OPTIONS'
       }
     })
       .then(function (response) {
