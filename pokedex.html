@@ -77,16 +77,6 @@
                               <th>Evoluciones</th>
                             </tr>
                           </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="">
-                              </td>
-                              <td>Pikachu</td>
-                              <td>Eléctrico</td>
-                              <td>Raychu</td>
-                            </tr>
-                          </tbody>
                         </table>
                       </div>
                     </div>
@@ -104,16 +94,6 @@
                               <th>Evoluciones</th>
                             </tr>
                           </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                <img src="" alt="">
-                              </td>
-                              <td>Meowth</td>
-                              <td>Normal</td>
-                              <td>Raychu</td>
-                            </tr>
-                          </tbody>
                         </table>
                       </div>
                     </div>
@@ -140,7 +120,7 @@
                   </div>
                   <p>¡Atrápalos ya!</p>
 
-                  <a href="#" class="btn btn-primary btn-icon-split btn-lg disabled">
+                  <a id="btn-catch" href="#" class="btn btn-primary btn-icon-split btn-lg disabled">
                     <span class="icon text-white-50">
                       <i class="fas fa-flag"></i>
                     </span>
@@ -190,7 +170,7 @@
   </div>
 
   <script>
-    fetch('https://q78z5yidec.execute-api.us-east-1.amazonaws.com/dev/pokemons/list', {
+    fetch('https://q78z5yidec.execute-api.us-east-1.amazonaws.com/dev/pokemons/list?pokState=L', {
       mode: 'cors',
       method: 'GET',
       headers: {
@@ -227,6 +207,8 @@
           td4.innerHTML = pokemon.level;
           tr.appendChild(td4);
           tr.addEventListener('click', event => {
+            $('#btn-catch').removeClass('disabled');
+
             alert('selected:' + event.target.innerHTML);
           });
 
@@ -235,7 +217,55 @@
         });
 
         $('#dataTableExistentes').DataTable();
+      });
 
+      fetch('https://q78z5yidec.execute-api.us-east-1.amazonaws.com/dev/pokemons/list?pokState=A', {
+      mode: 'cors',
+      method: 'GET',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, HEAD, OPTIONS'
+      }
+    })
+      .then(function (response) {
+        return response.json();
+
+      })
+      .then(function (pokemons) {
+        const table = document.getElementById("dataTableAtrapados");
+        const tbody = document.createElement('tbody');
+
+        pokemons.map(pokemon => {
+          const tr = document.createElement('tr');
+
+          const td1 = document.createElement('td');
+          const img = document.createElement('img');
+          img.src = pokemon.imageurl;
+          td1.appendChild(img);
+          tr.appendChild(td1);
+
+          const td2 = document.createElement('td');
+          td2.innerHTML = pokemon.name;
+          tr.appendChild(td2);
+
+          const td3 = document.createElement('td');
+          td3.innerHTML = pokemon.description;
+          tr.appendChild(td3);
+
+          const td4 = document.createElement('td');
+          td4.innerHTML = pokemon.level;
+          tr.appendChild(td4);
+          tr.addEventListener('click', event => {
+            $('#btn-catch').removeClass('disabled');
+
+            alert('selected:' + event.target.innerHTML);
+          });
+
+          tbody.appendChild(tr);
+          table.appendChild(tbody);
+        });
+
+        $('#dataTableAtrapados').DataTable();
       });
   </script>
 
