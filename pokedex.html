@@ -59,7 +59,6 @@
 
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="existentes" role="tabpanel" aria-labelledby="existentes-tab">
-
                   <div class="card-body">
                     <div class="table-responsive">
                       <table class="table table-bordered" id="dataTableExistentes" width="100%" cellspacing="0">
@@ -85,11 +84,9 @@
                         </tbody>
                       </table>
                     </div>
-
                   </div>
 
                   <div class="tab-pane fade" id="atrapados" role="tabpanel" aria-labelledby="nav-profile-tab">
-
                     <div class="card-body">
                       <div class="table-responsive">
                         <table class="table table-bordered" id="dataTableAtrapados" width="100%" cellspacing="0">
@@ -112,21 +109,6 @@
                               <td>Rayo, Trueno</td>
                               <td>Raychu</td>
                             </tr>
-                            <tr>
-                              <td>Garrett Winters</td>
-                              <td>Accountant</td>
-                              <td>Tokyo</td>
-                              <td>63</td>
-                              <td>2011/07/25</td>
-                            </tr>
-                            <tr>
-                              <td>Ashton Cox</td>
-                              <td>Junior Technical Author</td>
-                              <td>San Francisco</td>
-                              <td>66</td>
-                              <td>2009/01/12</td>
-                            </tr>
-
                           </tbody>
                         </table>
                       </div>
@@ -217,20 +199,7 @@
 
 </body>
 
-<script>
-  fetch('http://10.23.180.88:8080/pokemon/listByState')
-  .then(function(response) {
-    return response.json();
 
-  })
-  .then(function(myJson) {
-    const tbody = document.getElementById("tbody");
-    const tr = document.createElement('tr');
-    const td = document.createElement('td');
-    td.innerHTML = 'Hola';
-
-  });
-</script>
 
 
 </html>
