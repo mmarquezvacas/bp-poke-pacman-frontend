@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/pokedex.css" rel="stylesheet">
 
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -36,8 +36,7 @@
 
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-
-
+          <img style="height: 40px; padding: 0; width:auto;" src="http://www.geocities.ws/mipokedex/images/logo_pokedex.gif" alt="">
 
         </nav>
 
@@ -47,111 +46,114 @@
 
           <div class="row">
             <div class="col-lg-6">
+              <div class="card shadow mb-4">
 
-              <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" id="existentes-tab" data-toggle="tab" href="#existentes" role="tab" aria-controls="existentes" aria-selected="true">Existentes</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="atrapados-tab" data-toggle="tab" href="#atrapados" role="tab" aria-controls="atrapados" aria-selected="false">Atrapados</a>
-                </li>
-              </ul>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="existentes-tab" data-toggle="tab" href="#existentes" role="tab" aria-controls="existentes" aria-selected="true">Existentes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="atrapados-tab" data-toggle="tab" href="#atrapados" role="tab" aria-controls="atrapados" aria-selected="false">Atrapados</a>
+                  </li>
+                </ul>
 
-              <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="existentes" role="tabpanel" aria-labelledby="existentes-tab">
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="existentes" role="tabpanel" aria-labelledby="existentes-tab">
 
-                  <div class="card-body">
-                    <div class="table-responsive">
-                      <table class="table table-bordered" id="dataTableExistentes" width="100%" cellspacing="0">
-                        <thead>
-                          <tr>
-                            <th>Foto</th>
-                            <th>Nombre</th>
-                            <th>Tipo</th>
-                            <th>Habilidades</th>
-                            <th>Evoluciones</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img src="" alt="">
-                            </td>
-                            <td>Pikachu</td>
-                            <td>Eléctrico</td>
-                            <td>Rayo, Trueno</td>
-                            <td>Raychu</td>
-                          </tr>
-                          <tr>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>63</td>
-                            <td>2011/07/25</td>
-                          </tr>
-                          <tr>
-                            <td>Ashton Cox</td>
-                            <td>Junior Technical Author</td>
-                            <td>San Francisco</td>
-                            <td>66</td>
-                            <td>2009/01/12</td>
-                          </tr>
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTableExistentes" width="100%" cellspacing="0">
+                          <thead>
+                            <tr>
+                              <th>Foto</th>
+                              <th>Nombre</th>
+                              <th>Tipo</th>
+                              <th>Habilidades</th>
+                              <th>Evoluciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <img src="" alt="">
+                              </td>
+                              <td>Pikachu</td>
+                              <td>Eléctrico</td>
+                              <td>Rayo, Trueno</td>
+                              <td>Raychu</td>
+                            </tr>
+                            <tr>
+                              <td>Garrett Winters</td>
+                              <td>Accountant</td>
+                              <td>Tokyo</td>
+                              <td>63</td>
+                              <td>2011/07/25</td>
+                            </tr>
+                            <tr>
+                              <td>Ashton Cox</td>
+                              <td>Junior Technical Author</td>
+                              <td>San Francisco</td>
+                              <td>66</td>
+                              <td>2009/01/12</td>
+                            </tr>
 
-                        </tbody>
-                      </table>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
+
+                  </div>
+
+                  <div class="tab-pane fade" id="atrapados" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTableAtrapados" width="100%" cellspacing="0">
+                          <thead>
+                            <tr>
+                              <th>Foto</th>
+                              <th>Nombre</th>
+                              <th>Tipo</th>
+                              <th>Habilidades</th>
+                              <th>Evoluciones</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <img src="" alt="">
+                              </td>
+                              <td>Meowth</td>
+                              <td>Normal</td>
+                              <td>Rayo, Trueno</td>
+                              <td>Raychu</td>
+                            </tr>
+                            <tr>
+                              <td>Garrett Winters</td>
+                              <td>Accountant</td>
+                              <td>Tokyo</td>
+                              <td>63</td>
+                              <td>2011/07/25</td>
+                            </tr>
+                            <tr>
+                              <td>Ashton Cox</td>
+                              <td>Junior Technical Author</td>
+                              <td>San Francisco</td>
+                              <td>66</td>
+                              <td>2009/01/12</td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
                   </div>
 
                 </div>
 
-                <div class="tab-pane fade" id="atrapados" role="tabpanel" aria-labelledby="nav-profile-tab">
-
-                  <div class="card-body">
-                    <div class="table-responsive">
-                      <table class="table table-bordered" id="dataTableAtrapados" width="100%" cellspacing="0">
-                        <thead>
-                          <tr>
-                            <th>Foto</th>
-                            <th>Nombre</th>
-                            <th>Tipo</th>
-                            <th>Habilidades</th>
-                            <th>Evoluciones</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img src="" alt="">
-                            </td>
-                            <td>Meowth</td>
-                            <td>Normal</td>
-                            <td>Rayo, Trueno</td>
-                            <td>Raychu</td>
-                          </tr>
-                          <tr>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>63</td>
-                            <td>2011/07/25</td>
-                          </tr>
-                          <tr>
-                            <td>Ashton Cox</td>
-                            <td>Junior Technical Author</td>
-                            <td>San Francisco</td>
-                            <td>66</td>
-                            <td>2009/01/12</td>
-                          </tr>
-
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                </div>
 
               </div>
-
             </div>
             <div class="col-lg-6">
               <div class="card shadow mb-4">
