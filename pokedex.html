@@ -77,8 +77,6 @@
                               <th>Evoluciones</th>
                             </tr>
                           </thead>
-                          <tbody>
-                          </tbody>
                         </table>
                       </div>
                     </div>
@@ -94,37 +92,10 @@
                             <tr>
                               <th>Foto</th>
                               <th>Nombre</th>
-                              <th>Tipo</th>
                               <th>Habilidades</th>
                               <th>Evoluciones</th>
                             </tr>
                           </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                <img src="" alt="">
-                              </td>
-                              <td>Meowth</td>
-                              <td>Normal</td>
-                              <td>Rayo, Trueno</td>
-                              <td>Raychu</td>
-                            </tr>
-                            <tr>
-                              <td>Garrett Winters</td>
-                              <td>Accountant</td>
-                              <td>Tokyo</td>
-                              <td>63</td>
-                              <td>2011/07/25</td>
-                            </tr>
-                            <tr>
-                              <td>Ashton Cox</td>
-                              <td>Junior Technical Author</td>
-                              <td>San Francisco</td>
-                              <td>66</td>
-                              <td>2009/01/12</td>
-                            </tr>
-
-                          </tbody>
                         </table>
                       </div>
                     </div>
@@ -211,13 +182,16 @@
 
       })
       .then(function (pokemons) {
-        const tbody = document.getElementById("dataTableExistentes");
+        const table = document.getElementById("dataTableExistentes");
+        const tbody = document.createElement('tbody');
         pokemons.map(pokemon => {
           const tr = document.createElement('tr');
 
+          const td1 = document.createElement('td');
           const img = document.createElement('img');
           img.src = pokemon.imageurl;
-          tr.appendChild(img);
+          td1.appendChild(img);
+          tr.appendChild(td1);
 
           const td2 = document.createElement('td');
           td2.innerHTML = pokemon.name;
@@ -232,6 +206,7 @@
           tr.appendChild(td4);
 
           tbody.appendChild(tr);
+          table.appendChild(tbody);
 
         })
 
